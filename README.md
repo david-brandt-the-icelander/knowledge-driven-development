@@ -1,5 +1,11 @@
 # Knowledge-driven development
 
+> **Superseded.** Knowledge-driven development was an experiment, and I've since moved on from it.
+> What replaced it is [human-assisted software development](https://github.com/david-brandt-the-icelander/human-assisted-software-development):
+> what a system knows about itself is kept as structured metadata in `.dev` folders next to the code,
+> maintained by agents and drawn by tools so people can actually read it. Repositories that adopted
+> knowledge-driven development can keep following it; this repository stays as it was written.
+
 A way of building software when most of the builders are agents. There is no backlog beside the
 system: the documents that describe the system are the backlog. They describe what the system should
 be, in the present tense, and every statement carries a mark saying whether it's true yet.
