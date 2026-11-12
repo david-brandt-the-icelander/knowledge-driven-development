@@ -1,0 +1,67 @@
+{
+  "$schema": "../Meta/Agents/Knowledge/schemas/backlog.schema.json",
+  "kind": "backlog",
+  "title": "Backlog for the convention",
+  "folder": ".",
+  "entities": [
+    {
+      "id": "graduated-document-status",
+      "title": "Is a graduated document still under the convention?",
+      "summary": "Graduation replaces a document's status line with a ✅ line, and two other passages disagree on what that leaves: one says the document has left the convention, the other that the graduation check fails it.",
+      "type": "defect",
+      "status": "proposed",
+      "priority": "low",
+      "expected": "The documents agree on whether a graduated document is under the convention, and the optional graduation check passes a correctly graduated document.",
+      "observed": "02 § Graduation replaces the status line with \"> ✅ This component is fully implemented, tested and free of known defects.\" The README says a document without the status line has not adopted the convention. 06's graduation check fails \"a document under the convention\" that \"contains ✅ but no ⚠️ and no ❌\", which a graduated document does if it is still under the convention.",
+      "details": "Either reading is consistent on its own: if a graduated document has left the convention, the graduation check never sees it; if it has not, the check as written fails every graduated document, because the line graduation keeps is a ✅. The repository is superseded and stays as it was written, so whether to fix the wording is the owner's call.",
+      "origin": {
+        "kind": "review",
+        "by": "Coding agent",
+        "date": "2026-11-12",
+        "description": "Found while reading the documents to install human-assisted software development."
+      },
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "02-annotation-convention.md",
+          "symbol": "Graduation"
+        },
+        {
+          "path": "README.md",
+          "symbol": "Linking to this convention"
+        },
+        {
+          "path": "06-enforcement.md",
+          "symbol": "Optional gates"
+        }
+      ]
+    },
+    {
+      "id": "agent-instructions-count",
+      "title": "Adoption says the agent-instructions lines do four things; they do six",
+      "summary": "05 § 1 lists four things the lines in templates/agent-instructions.md do, and the block has two lines more.",
+      "type": "defect",
+      "status": "proposed",
+      "priority": "low",
+      "expected": "05 § 1's account of the block matches templates/agent-instructions.md.",
+      "observed": "05 § 1 says the lines do four things: route agents to the documents, move the mark in the same commit, reserve ✅, and ban TODO. The block also tells agents to record a defect whose fix has to wait as a ❌, and to write a change log for every prompt that changes the code; the template calls the change-log line optional.",
+      "origin": {
+        "kind": "review",
+        "by": "Coding agent",
+        "date": "2026-11-12",
+        "description": "Found while reading the documents to install human-assisted software development."
+      },
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "05-adoption.md",
+          "symbol": "1. Tell the agents"
+        },
+        {
+          "path": "templates/agent-instructions.md",
+          "symbol": "Knowledge-driven development"
+        }
+      ]
+    }
+  ]
+}

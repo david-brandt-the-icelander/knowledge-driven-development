@@ -1,0 +1,56 @@
+{
+  "$schema": "../Meta/Agents/Knowledge/schemas/folder.schema.json",
+  "kind": "folder",
+  "title": "knowledge-driven-development",
+  "folder": ".",
+  "entities": [
+    {
+      "id": "folder",
+      "title": "knowledge-driven-development",
+      "summary": "The canonical statement of knowledge-driven development, a documentation convention for repositories built mostly by agents, now superseded by human-assisted software development.",
+      "purpose": "Holds the convention that repositories which adopt it link to instead of restating it: the README with the four marks and the rules that matter most, the six numbered documents (01-methodology.md to 06-enforcement.md), and a starting file per document kind in templates/. Meta/Agents/ holds the skills and knowledge catalogue the .dev folders follow.",
+      "boundaries": [
+        "The convention is about other repositories' documentation. This repository is exempt from its own greps: every mark in it is an example or a definition, not a claim about a system.",
+        "The reasoning behind the convention is in a five-part series on icelander.net, not here.",
+        "Meta/Agents/Skills and Meta/Agents/Knowledge are copies from the human-assisted-software-development repository, changed there and copied here."
+      ],
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "README.md",
+          "symbol": "Knowledge-driven development"
+        },
+        {
+          "path": "README.md",
+          "symbol": "The documents"
+        },
+        {
+          "path": "README.md",
+          "symbol": "Linking to this convention"
+        },
+        {
+          "path": "AGENTS.md",
+          "symbol": "Architecture diagrams and knowledge files"
+        }
+      ],
+      "links": [
+        {
+          "path": "README.md",
+          "label": "README"
+        },
+        {
+          "path": "AGENTS.md",
+          "label": "Agent instructions"
+        },
+        {
+          "path": ".dev/component-diagram.json",
+          "label": "The repository's parts"
+        },
+        {
+          "path": "templates/.dev/folder.json",
+          "label": "Templates"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../Meta/Agents/Knowledge/schemas/limitations.schema.json",
+  "kind": "limitations",
+  "title": "Limitations of the convention's own repository",
+  "folder": ".",
+  "entities": [
+    {
+      "id": "exempt-from-own-greps",
+      "title": "Exempt from its own greps",
+      "summary": "The repository does not follow the convention it states: every mark in it is an example or a definition, not a claim about a system.",
+      "impact": "Grepping this repository for ⚠️ or ❌ returns definitions and examples, not work to do, and the numbered documents carry no status line. The README's table of the four marks and the marks in templates/ are mentions; the templates' status lines are part of what an adopter copies.",
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "README.md",
+          "symbol": "Linking to this convention"
+        },
+        {
+          "path": "templates/README.md",
+          "symbol": "Templates"
+        }
+      ]
+    }
+  ]
+}
