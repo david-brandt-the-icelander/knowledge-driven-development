@@ -1,0 +1,43 @@
+{
+  "$schema": "../Meta/Agents/Knowledge/schemas/decisions.schema.json",
+  "kind": "decisions",
+  "title": "Decisions for the convention",
+  "folder": ".",
+  "entities": [
+    {
+      "id": "superseded-by-hasd",
+      "title": "Superseded by human-assisted software development",
+      "summary": "Knowledge-driven development is no longer developed: human-assisted software development replaced it, and this repository stays as it was written.",
+      "status": "accepted",
+      "context": "Knowledge-driven development keeps what a system should be in Markdown documents, each statement carrying a mark. Human-assisted software development keeps what a system knows about itself as structured metadata in .dev folders next to the code, maintained by agents and drawn by tools.",
+      "decision": "Mark it superseded and leave it as written. Repositories that adopted it can keep following it.",
+      "decidedBy": "Owner",
+      "decidedOn": "2026-11-10",
+      "origin": {
+        "kind": "document",
+        "reference": "README.md",
+        "description": "The notice at the top of the README, added in commit 2d4adee (Mark knowledge-driven development as superseded)."
+      },
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "README.md",
+          "symbol": "Knowledge-driven development"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/david-brandt-the-icelander/human-assisted-software-development",
+          "label": "Human-assisted software development"
+        }
+      ],
+      "relationships": [
+        {
+          "relation": "relates-to",
+          "path": ".dev/references.json",
+          "entityId": "hasd"
+        }
+      ]
+    }
+  ]
+}

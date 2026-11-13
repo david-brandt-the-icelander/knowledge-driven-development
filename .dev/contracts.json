@@ -1,0 +1,54 @@
+{
+  "$schema": "../Meta/Agents/Knowledge/schemas/contracts.schema.json",
+  "kind": "contracts",
+  "title": "What adopting repositories rely on",
+  "folder": ".",
+  "entities": [
+    {
+      "id": "status-line",
+      "title": "The status line",
+      "summary": "A document under the convention says so in one line at the top, linking to this repository, and never restates the legend.",
+      "contractType": "link",
+      "consumers": [
+        "Documents in repositories that adopted knowledge-driven development",
+        "Agent instructions written from templates/agent-instructions.md"
+      ],
+      "guarantees": [
+        "The repository's URL leads to the definition of the four marks, so a document that links here needs no legend of its own.",
+        "The definition lives here once; adopting repositories link to it rather than copying it."
+      ],
+      "compatibility": "The README says the repository stays as it was written, and repositories that adopted the convention can keep following it.",
+      "definition": "README.md",
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "README.md",
+          "symbol": "Linking to this convention"
+        },
+        {
+          "path": "README.md",
+          "symbol": "Knowledge-driven development"
+        },
+        {
+          "path": "02-annotation-convention.md",
+          "symbol": "No page carries the legend"
+        },
+        {
+          "path": "05-adoption.md",
+          "symbol": "1. Tell the agents"
+        },
+        {
+          "path": "templates/agent-instructions.md",
+          "symbol": "Knowledge-driven development"
+        }
+      ],
+      "relationships": [
+        {
+          "relation": "relates-to",
+          "path": ".dev/decisions.json",
+          "entityId": "superseded-by-hasd"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "../Meta/Agents/Skills/describe-component-diagram/schema.json",
+  "kind": "component",
+  "title": "knowledge-driven-development component diagram",
+  "folder": ".",
+  "description": "The repository's parts: the convention's documents at the root, the templates adopters copy, the skills and catalogue its .dev folders follow, and what outside the repository it points at.",
+  "sources": [
+    {
+      "path": "README.md",
+      "symbol": "The documents"
+    },
+    {
+      "path": "README.md",
+      "symbol": "Knowledge-driven development"
+    },
+    {
+      "path": "templates/README.md",
+      "symbol": "Templates"
+    },
+    {
+      "path": "AGENTS.md",
+      "symbol": "Architecture diagrams and knowledge files"
+    }
+  ],
+  "components": [
+    {
+      "id": "convention",
+      "name": "knowledge-driven-development",
+      "responsibility": "The canonical statement of the convention: the README, which defines the four marks and lists the rules that matter most, and the numbered documents 01 to 06, each of which links back to it.",
+      "folder": "."
+    },
+    {
+      "id": "templates",
+      "name": "Templates",
+      "responsibility": "A starting file for the feature, user-journey and subsystem kinds, and the lines for an adopting repository's agent instructions.",
+      "folder": "templates"
+    },
+    {
+      "id": "meta",
+      "name": "Skills and knowledge catalogue (Meta/Agents)",
+      "responsibility": "How the .dev files are written, and the validators that check them; copied from human-assisted-software-development.",
+      "folder": "Meta/Agents"
+    },
+    {
+      "id": "series",
+      "name": "There is no TODO (icelander.net)",
+      "responsibility": "The five-part series with the reasoning behind the convention.",
+      "external": true
+    },
+    {
+      "id": "hasd",
+      "name": "Human-assisted software development",
+      "responsibility": "The method that superseded the convention, and the repository the skills and catalogue are copied from.",
+      "external": true
+    }
+  ],
+  "relationships": [
+    {
+      "from": "convention",
+      "to": "templates",
+      "kind": "contains",
+      "description": "Part of the repository."
+    },
+    {
+      "from": "convention",
+      "to": "meta",
+      "kind": "contains",
+      "description": "Part of the repository."
+    },
+    {
+      "from": "templates",
+      "to": "convention",
+      "kind": "depends-on",
+      "description": "Each template links to the convention for the marks, and the kinds are defined in 04-document-taxonomy.md."
+    },
+    {
+      "from": "convention",
+      "to": "series",
+      "kind": "depends-on",
+      "description": "The README sends readers there for the reasoning."
+    },
+    {
+      "from": "convention",
+      "to": "hasd",
+      "kind": "depends-on",
+      "description": "The README's notice points readers at what replaced the convention."
+    },
+    {
+      "from": "meta",
+      "to": "hasd",
+      "kind": "depends-on",
+      "description": "Copied unchanged from its Agents/Skills and Agents/Knowledge."
+    }
+  ]
+}

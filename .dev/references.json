@@ -1,0 +1,40 @@
+{
+  "$schema": "../Meta/Agents/Knowledge/schemas/references.schema.json",
+  "kind": "references",
+  "title": "References for the convention",
+  "folder": ".",
+  "entities": [
+    {
+      "id": "series",
+      "title": "There is no TODO",
+      "summary": "A five-part series on icelander.net with the reasoning behind the convention and what it is like to work this way.",
+      "url": "https://icelander.net/v1/processes/there-is-no-todo",
+      "relevance": "The README sends readers there for the reasoning; the documents here state the convention and leave the argument to the series.",
+      "evidenceStatus": "documented",
+      "sources": [
+        {
+          "path": "README.md",
+          "symbol": "Knowledge-driven development"
+        }
+      ]
+    },
+    {
+      "id": "hasd",
+      "title": "Human-assisted software development",
+      "summary": "The method that replaced knowledge-driven development, and the source of the skills and knowledge catalogue in Meta/Agents/.",
+      "url": "https://github.com/david-brandt-the-icelander/human-assisted-software-development",
+      "relevance": "The README's notice points readers there. Meta/Agents/Skills and Meta/Agents/Knowledge are copies of its Agents/Skills and Agents/Knowledge, changed there and copied here.",
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "README.md",
+          "symbol": "Knowledge-driven development"
+        },
+        {
+          "path": "AGENTS.md",
+          "symbol": "Architecture diagrams and knowledge files"
+        }
+      ]
+    }
+  ]
+}

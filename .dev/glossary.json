@@ -1,0 +1,128 @@
+{
+  "$schema": "../Meta/Agents/Knowledge/schemas/glossary.schema.json",
+  "kind": "glossary",
+  "title": "Glossary of the convention",
+  "folder": ".",
+  "description": "The terms the documents use, each with the section that defines it. The documents own the definitions; these entries point at them.",
+  "entities": [
+    {
+      "id": "mark",
+      "title": "Mark",
+      "summary": "One of ✅, ⚠️, ❌ and ⛔ on a statement in documentation, saying whether the statement is true of the system yet.",
+      "notToBeConfusedWith": [
+        "Mention: the same glyph in a legend, an example, a template or a quotation, which is not a claim",
+        "A status icon in the product, such as a badge on an admin page; marks never go in a string a user reads"
+      ],
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "README.md",
+          "symbol": "The four marks"
+        },
+        {
+          "path": "02-annotation-convention.md",
+          "symbol": "Where the marks go"
+        }
+      ]
+    },
+    {
+      "id": "mention",
+      "title": "Mention",
+      "summary": "A glyph that is not a claim about the system: a legend, or a mark inside an example, a template or a quotation.",
+      "notToBeConfusedWith": [
+        "Mark: a claim about the system, which the greps are meant to find"
+      ],
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "02-annotation-convention.md",
+          "symbol": "No page carries the legend"
+        },
+        {
+          "path": "templates/README.md",
+          "symbol": "Templates"
+        }
+      ]
+    },
+    {
+      "id": "graduation",
+      "title": "Graduation",
+      "summary": "When a document has no ⚠️ and no ❌ left, every ✅ in its body is deleted and its status line is replaced by one line saying it is fully implemented, tested and free of known defects.",
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "02-annotation-convention.md",
+          "symbol": "Graduation"
+        }
+      ]
+    },
+    {
+      "id": "knowledge-document",
+      "title": "Knowledge document",
+      "summary": "A Markdown document describing the system as it should be, in the present tense, from one named perspective, each statement about a capability carrying a mark.",
+      "aliases": [
+        "The documents"
+      ],
+      "notToBeConfusedWith": [
+        "Knowledge file: in human-assisted software development, a structured .dev/<kind>.json file next to the code, such as the files in this repository's .dev folders"
+      ],
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "01-methodology.md",
+          "symbol": "The claim"
+        },
+        {
+          "path": "04-document-taxonomy.md",
+          "symbol": "04 — Document taxonomy"
+        },
+        {
+          "path": "05-adoption.md",
+          "symbol": "4. Write the documents that are missing"
+        }
+      ]
+    },
+    {
+      "id": "deferred-work-gate",
+      "title": "Deferred-work gate",
+      "summary": "The gate that fails the build on a TODO, FIXME, HACK or XXX marker opening a comment in a tracked source file, and on any tracked path under a TODO/ directory; the one rule that needed a build failure.",
+      "notToBeConfusedWith": [
+        "The optional gates (graduation, orphan-⛔, legend and Markdown TODO checks), none of them serious if missing"
+      ],
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "06-enforcement.md",
+          "symbol": "The deferred-work gate"
+        },
+        {
+          "path": "02-annotation-convention.md",
+          "symbol": "There is no `TODO`"
+        }
+      ]
+    },
+    {
+      "id": "change-log",
+      "title": "Change log",
+      "summary": "A file written for every prompt that changes the code base: what was asked for, how the agent interpreted it, and what the change needs (testing, data migration, compatibility).",
+      "notToBeConfusedWith": [
+        "The changelog: the record of the past that stays alongside the documents and, like decision records, never carries marks"
+      ],
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "03-workflow.md",
+          "symbol": "Review"
+        },
+        {
+          "path": "01-methodology.md",
+          "symbol": "What stays"
+        },
+        {
+          "path": "templates/agent-instructions.md",
+          "symbol": "Knowledge-driven development"
+        }
+      ]
+    }
+  ]
+}

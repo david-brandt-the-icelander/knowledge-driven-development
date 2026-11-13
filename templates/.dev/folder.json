@@ -1,0 +1,39 @@
+{
+  "$schema": "../../Meta/Agents/Knowledge/schemas/folder.schema.json",
+  "kind": "folder",
+  "title": "Templates",
+  "folder": "templates",
+  "entities": [
+    {
+      "id": "folder",
+      "title": "Templates",
+      "summary": "A starting file for three of the document kinds, and the lines a repository's agent instructions need.",
+      "purpose": "Holds feature.md, journey.md and subsystem.md, starting files for the feature, user-journey and subsystem kinds of 04-document-taxonomy.md, and agent-instructions.md, the block an adopting repository pastes into AGENTS.md or CLAUDE.md. An adopter copies a file, fills it in and deletes what does not apply.",
+      "boundaries": [
+        "The kinds themselves, and which one a fact belongs in, are defined in 04-document-taxonomy.md; the templates only give them a shape.",
+        "The marks in the templates are placeholders, and so mentions rather than claims; once a copy is filled in, every mark in it is a claim about the adopter's system."
+      ],
+      "evidenceStatus": "source-verified",
+      "sources": [
+        {
+          "path": "templates/README.md",
+          "symbol": "Templates"
+        },
+        {
+          "path": "04-document-taxonomy.md",
+          "symbol": "The usual kinds"
+        },
+        {
+          "path": "05-adoption.md",
+          "symbol": "1. Tell the agents"
+        }
+      ],
+      "links": [
+        {
+          "path": "templates/README.md",
+          "label": "Templates"
+        }
+      ]
+    }
+  ]
+}
